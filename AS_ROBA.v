@@ -6,7 +6,7 @@ module top(
             output [31:0] Q_p
             );
  wire  [15:0]Q_x,Q_y;
-   wire [31:0] p;
+ wire [31:0] p;
    
    //Adding a flip-flop to input and output 
   RisingEdge_DFlipFlop_16 d_ff_x(x,clk,Q_x); 
@@ -175,7 +175,7 @@ module PriorityEncoder_16(
 
 	always @*
 		case (data_i)
-	     16'b0000000000000001 : code_o = 4'b0000;
+	 16'b0000000000000001 : code_o = 4'b0000;
          16'b0000000000000010 : code_o = 4'b0001;
          16'b0000000000000100 : code_o = 4'b0010;
          16'b0000000000001000 : code_o = 4'b0011;
@@ -183,7 +183,7 @@ module PriorityEncoder_16(
          16'b0000000000100000 : code_o = 4'b0101;
          16'b0000000001000000 : code_o = 4'b0110;
          16'b0000000010000000 : code_o = 4'b0111;
-		 16'b0000000100000000 : code_o = 4'b1000;
+         16'b0000000100000000 : code_o = 4'b1000;
          16'b0000001000000000 : code_o = 4'b1001;
          16'b0000010000000000 : code_o = 4'b1010;
          16'b0000100000000000 : code_o = 4'b1011;
@@ -192,9 +192,9 @@ module PriorityEncoder_16(
          16'b0100000000000000 : code_o = 4'b1110;
          16'b1000000000000000 : code_o = 4'b1111;
 			
-			default     : code_o = 4'b0000;
-		endcase
-		
+	 default     : code_o = 4'b0000;
+	        endcase
+	
 endmodule
 
 
